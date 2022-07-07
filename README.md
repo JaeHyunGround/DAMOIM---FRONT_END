@@ -24,7 +24,7 @@ cmd창에서 프로젝트 폴더로 이동
 > git commit -m ".."		=> 수정한 부분에 대한 주석 기능  <br/>
 > git init			=> 초기화  <br/>
 > git merge 브랜치이름	=> 브랜치 병합  <br/>
-> git pull [원격 저장소] [받을 브랜치]		=> 원격 저장소에서 브랜치로 받아오는 작업  <br/>
+> git pull [원격 저장소] [받을 브랜치]		=> 원격 저장소에서 브랜치로 받아오는 작업 ex) git pull origin min  <br/>
 > git push				=> 원격 저장소에 push  <br/>
 > git push --set-upstream			=> 원인 모를 에러로 push가 안될 경우 강제 push  <br/>
 > git push --set-upstream origin 브랜치	=> 브랜치를 원격 저장소와 연결  <br/>
