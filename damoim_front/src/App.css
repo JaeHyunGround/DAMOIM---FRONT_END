@@ -1,0 +1,19 @@
+.Damoim {
+  text-align: center;
+}
+
+#head {
+  padding: 30px 0 30px;
+  border-bottom: 2px solid;
+}
+
+#body {
+  padding: 80px 0 80px 0;
+  margin:  80px 60px 80px 60px;
+  border: 1px solid;
+}
+
+#bottom {
+  margin:  80px 60px 80px 60px;
+  border: 1px solid;
+}
