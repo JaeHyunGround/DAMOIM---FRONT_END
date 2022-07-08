@@ -5,9 +5,11 @@ function Header() {
     return (
         <>
             <section className='headLeft'>
-                <span><Link to="/">
-                    <img className='logo' src='image/Kit_Logo.png' />
-                </Link></span>
+                <span>
+                    <Link to="/">
+                        <img className='logo' src='image/Kit_Logo.png' />
+                    </Link>
+                </span>
             </section>
 
             <section className='headRight'>
