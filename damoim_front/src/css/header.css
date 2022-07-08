@@ -1,3 +1,35 @@
-.logo {
+.headTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.headLeft {
     width: 20%;
+}
+
+.logo {
+    width: 120px;
+}
+
+.headCenter {
+    width: 60%;
+}
+
+.headRight {
+    width: 20%;
+    padding-top: 60px;
+}
+
+.headRight > span {
+    padding: 10px;
+}
+
+.headBottom {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 80px 10px 80px;
+    margin: 10px 0 10px 0;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
 }
