@@ -6,7 +6,7 @@
 
 <br/>
 
-<h2>!!! 중요사항 !!!</h2>
+<h2>!! 중요사항 !!</h2>
 작업 공간 = 개인 브랜치(수연:sy, 승민:min)<br/>
 git pull/merge --no-ff 할 경우,<br/>
 반드시!!! switch/checkout main 해서 메인 브랜치로 이동 후에 진행<br/>
