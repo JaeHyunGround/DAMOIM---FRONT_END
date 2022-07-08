@@ -7,10 +7,29 @@
 <br/>
 
 <h2>!! 중요사항 !!</h2>
-작업 공간 = 개인 브랜치(수연:sy, 승민:min)<br/>
-git pull/merge --no-ff 할 경우,<br/>
-반드시!!! switch/checkout main 해서 메인 브랜치로 이동 후에 진행<br/>
-작업할 때에는 다시 개인 브랜치로 이동해서 진행<br/>
+pull 할 경우,<br/><br/>
+
+git switch main<br/>
+git pull<br/><br/>
+
+바로 적용하고싶다면?<br/><br/>
+
+git switch (개인 브랜치)<br/>
+git add .<br/>
+git commit -m "(주석)"<br/>
+git switch main<br/>
+git merge --no-ff (작업했던 개인 브랜치)<br/>
+git push<br/>
+git branch -D (작업했던 개인 브랜치)<br/>
+git branch (개인 브랜치: 재생성)<br/><br/>
+
+바뀐 환경에서 작업 진행~<br/><br/>
+
+수정 다 하고 올린다면?<br/>
+
+- 적용 단계 수행
+
+<br/><br/><br/>
 
 <h3>간단한 깃 사용법</h3>
 
