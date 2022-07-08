@@ -1,3 +1,4 @@
+import '../css/header.css';
 import { Link } from 'react-router-dom';
 
 function Header() {
@@ -5,6 +6,7 @@ function Header() {
         <>
             <section className='headLeft'>
                 <span><Link to="/">
+                    <img className='logo' src='image/Kit_Logo.png' />
                 </Link></span>
             </section>
 
