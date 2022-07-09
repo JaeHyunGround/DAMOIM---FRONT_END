@@ -1,35 +1,49 @@
 import '../css/header.css';
 import { Link } from 'react-router-dom';
+import { getData } from '../clubData';
 
 function Header() {
+    const clubdata = getData();
+    const category = [];
+
+    clubdata.map((club) => {
+        if (!category.includes(club.type))
+            category.push(club.type)
+    })
+
     return (
         <>
             <section className='headTop'>
                 <div className='headLeft'>
-                    <span>
-                        <Link to="/">
-                            <img className='logo' src='image/Kit_Logo.png' />
-                        </Link>
-                    </span>
+                    <Link to="/">
+                        <img className='logo' src='/image/Kit_Logo.png' />
+                    </Link>
                 </div>
 
                 <div className='headCenter'>
-                    <span>
-                        <a>DAMOIM</a>
-                    </span>
+                    <a>DAMOIM</a>
                 </div>
 
                 <div className='headRight'>
-                    <span><Link to="/login">로그인</Link></span>
-                    <span><Link to="/signUp">회원가입</Link></span>
+                    <li>
+                        <Link to="/login" style={{ textDecoration: 'none' }}>
+                            로그인
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/signUp" style={{ textDecoration: 'none' }}>
+                            회원가입
+                        </Link>
+                    </li>
                 </div>
             </section>
 
             <section className='headBottom'>
-                <a>분류1</a>
-                <a>분류2</a>
-                <a>분류3</a>
-                <a>분류4</a>
+                {category.map((type) => (
+                    <Link to={`/${type}`} style={{ textDecoration: 'none' }}>
+                        <li>{type}</li>
+                    </Link>
+                ))}
             </section>
         </>
     );

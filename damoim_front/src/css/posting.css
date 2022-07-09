@@ -1,0 +1,30 @@
+.titleBox {
+    width: 90%;
+    font-size: 18pt;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 8px;
+}
+
+.contentBox {
+    width: 90%;
+    resize: none;
+    height: 500px;
+    padding: 10px;
+    font-size: 11pt;
+}
+
+.post {
+    text-align: end;
+    padding-top: 15px;
+    padding-right: 4%;
+}
+
+.post > button {
+    padding: 3px 20px 3px 20px;
+    border: 1px solid skyblue;
+    background-color: rgb(164, 229, 255);
+    font-size: 12pt;
+    font-weight: bold;
+    cursor: pointer;
+}

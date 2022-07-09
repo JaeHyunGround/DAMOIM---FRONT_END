@@ -17,11 +17,13 @@
 }
 
 .headRight {
+    display: flex;
     width: 20%;
     padding-top: 60px;
+    list-style: none;
 }
 
-.headRight > span {
+.headRight > li {
     padding: 10px;
 }
 
@@ -32,4 +34,5 @@
     margin: 10px 0 10px 0;
     border-top: 1px solid;
     border-bottom: 1px solid;
+    list-style: none;
 }

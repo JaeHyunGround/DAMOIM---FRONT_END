@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Category } from '../component/category';
 import Footer from '../component/footer';
 import Header from '../component/header';
 
@@ -12,7 +12,7 @@ function mainPage() {
             <section id="body">
                 메인 페이지
                 <div>
-                    <span><Link to="/club">동아리카드(이름을 전달해줄거에요)</Link></span>
+                    <Category />
                 </div>
             </section>
 

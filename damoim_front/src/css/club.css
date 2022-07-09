@@ -1,0 +1,18 @@
+.clubTable {
+    display: flex;
+    justify-content: space-around;
+}
+
+.clubCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    border: 1px solid lightslategray;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.clubCard > img {
+    width: 150px;
+}
