@@ -1,5 +1,7 @@
 import Header from "../component/header";
 import { Link } from "react-router-dom";
+import { ClubContent } from "../component/clubContent";
+import Footer from "../component/footer";
 
 function clubPage() {
     return (
@@ -11,9 +13,12 @@ function clubPage() {
             <section id="body">
                 동아리 페이지
                 <div>
-                    url에서<br />
-                    'club/동아리이름' 형태로 페이지 달라질 예정!
+                    <ClubContent />
                 </div>
+            </section>
+
+            <section id="bottom">
+                <Footer />
             </section>
         </>
     );

@@ -6,15 +6,17 @@ import LoginPage from './page/login';
 import EditPage from './page/edit';
 import PostingPage from './page/posting';
 import PostPage from './page/post';
-
+import { Category } from './component/category';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <div className="Damoim">
       <Routes>
-        <Route path='/' element={<MainPage />} />
-        <Route path='/club' element={<ClubPage />} />
+        <Route path='/' element={<MainPage />}>
+          <Route path='/:category' element={<Category />} />
+        </Route>
+        <Route path='/club/:clubName' element={<ClubPage />} />
         <Route path='/signUp' element={<SignUpPage />} />
         <Route path='/login' element={<LoginPage />} />
         <Route path='/edit' element={<EditPage />} />
