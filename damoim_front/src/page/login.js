@@ -1,15 +1,14 @@
 import '../css/login.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../component/footer';
-import { useDispatch } from 'react-redux';
-import { loginUser } from '../actions/user_action';
+import axios from 'axios';
 
-function LoginPage(props) {
-    const dispatch = useDispatch();
+const LoginPage = () => {
 
     const [id, setId] = useState("")
     const [password, setPassword] = useState("")
+    const [test, setTest] = useState([]);
 
     const onIdHandler = (event) => {
         setId(event.currentTarget.value)
@@ -19,25 +18,24 @@ function LoginPage(props) {
         setPassword(event.currentTarget.value)
     }
 
-    const onSubmitHandler = (event) => {
-        event.preventDefault();
-
-        let body = {
+    const onSubmitHandler = () => {           
+        
+        // event.preventDefault();
+        const body = {
             id: id,
             password: password
         }
 
-        dispatch(loginUser(body))
-            .then(response => {
-                if (response.payload.loginSuccess) {
-                    props.history.push('/')
-                } else {
-                    alert('Error')
-                }
-            })
-
-
+        axios.get('http://115.85.181.24:8083/scooter/state')
+        .then(res => {
+            setTest(res.data);
+        })
     }
+
+    useEffect(() => {
+        console.log(test);
+    }, [test]);
+
     return (
         <>
             <div>
@@ -73,3 +71,4 @@ function LoginPage(props) {
 }
 
 export default LoginPage;
+

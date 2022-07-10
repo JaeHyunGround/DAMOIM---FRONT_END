@@ -6,6 +6,7 @@ import LoginPage from './page/login';
 import EditPage from './page/edit';
 import PostingPage from './page/posting';
 import PostPage from './page/post';
+import { Category } from './component/category';
 import { Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -17,7 +18,6 @@ function App() {
 
   // const login = ({id, password}) => setUser(signIn({id, password}));
   // const logout = () => setUser(null);
-
 
   return (
     <div className="Damoim">
