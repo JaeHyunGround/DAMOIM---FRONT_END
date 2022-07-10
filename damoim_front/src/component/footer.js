@@ -5,7 +5,7 @@ function Footer() {
             <div className='footer-box'>
                 <div className="idea-box">
                     <div className="idea-img">
-                        <img className='logo' src='/image/Kit_Logo.png' />
+                        <img className='footer-logo' src='/image/damoimlogo4.png' />
                     </div>
                     <div className="idea-text">
                         <p className="idea">아이디어 소개글</p>
@@ -14,7 +14,7 @@ function Footer() {
                 <div className="intro-box">
                     <div className="intro-img">
                         <a href='https://www.notion.so/10-95302d8693d548dc93a2b876cf28195f'>
-                        <img className='logo' src='/image/Kit_Logo.png' />
+                            <img className='footer-logo' src='/image/Kit_Logo.png' />
                         </a>
                     </div>
                     <div className="intro-txt">
