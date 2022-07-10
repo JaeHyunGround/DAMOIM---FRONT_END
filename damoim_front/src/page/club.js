@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ClubContent } from "../component/clubContent";
 import Footer from "../component/footer";
 
-function clubPage() {
+function ClubPage() {
     return (
         <>
             <section id="head">
@@ -24,4 +24,4 @@ function clubPage() {
     );
 }
 
-export default clubPage;
+export default ClubPage;

@@ -2,7 +2,7 @@ import '../css/posting.css';
 import Header from "../component/header";
 import Footer from "../component/footer";
 
-function postingPage() {
+function PostingPage() {
     return (
         <>
             <section id="head">
@@ -32,4 +32,4 @@ function postingPage() {
     );
 }
 
-export default postingPage;
+export default PostingPage;
