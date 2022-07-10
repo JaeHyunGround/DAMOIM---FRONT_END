@@ -11,7 +11,7 @@ function Footer() {
                 </div>
                 <div className="intro-box">
                     <div className="intro-img">
-                        <img className='logo' src='./image/Kit_Logo.png' />
+                        <img className='logo' src='/image/Kit_Logo.png' />
                     </div>
                     <div className="intro-txt">
                         <p className="txt">운영진 : 안재현<br />
