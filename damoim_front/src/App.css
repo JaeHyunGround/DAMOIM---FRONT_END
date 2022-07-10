@@ -1,6 +1,9 @@
+@import url('https://webfontworld.github.io/seoulnamsan/SeoulNamsan.css');
+
 .Damoim {
   text-align: center;
   min-width: 800px;
+  font-family: 'SeoulNamsan';
 }
 
 #head {
