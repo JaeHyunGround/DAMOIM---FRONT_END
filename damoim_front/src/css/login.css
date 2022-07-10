@@ -1,39 +1,75 @@
 .login-logo {
+    margin: 0 auto;
     cursor: pointer;
+    margin-top: 123px;
 }
 
-.name{
+.login_text {
     font-size: 3rem;
-    color: skyblue;
+    color: #87CEFE;
+    margin-bottom: 3rem;
 }
 
 .login-box{
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
+}
+
+.login-id{
+    width: 30%;
+    height: 3.3rem;
+    border-radius: 10px;
+    font-size: 1.8rem;
+    margin: 0 auto;
+    box-shadow: 0px 4px 7px -4px gray;
 }
 
 .login-pw{
-    width: 20%;
-    height: 2rem;
+    width: 30%;
+    height: 3.3rem;
+    border-radius: 10px;
+    font-size: 1.8rem;
     margin: 0 auto;
-    margin-top: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0px 4px 7px -4px gray;
 }
 
 .login-btn{
-    width: 20%;
-    height: 2rem;
-    background-color: skyblue;
+    width: 30%;
+    height: 3.3rem;
+    border-radius: 10px;
+    font-size: 1.8rem;
+    background-color: #87CEFE;
+    border: 1px solid #87CEFE;
     color: black;
-    margin-top: 1rem;
 }
 
 .move-box{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content:space-around;
+    width: 30%;
+    height: 3.3rem;
+    margin: 0 auto;
+    margin-top: 20px;
     
 }
+
 .min-text{
+    cursor: pointer;
     font-size: 1rem;
-    margin-left: 1rem;
+    color: black;
+    text-decoration: none;
+}
+
+.login-bottom-logo {
+    display: flex;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.login-bottomlogosize {
+    width: 150px;
 }

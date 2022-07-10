@@ -52,19 +52,24 @@ function EditPage(props) {
         
     }
 
+    const goMain = () => {
+        document.location.href = "/";
+    }
+
     return (
         <>
-            <div>
-                <p className='name'>비밀번호 변경</p>
+            <div className='edit-top' onClick={goMain}>
+                <img src='image/damoimlogo2.png'></img>
+                <div className='name'>비밀번호 변경</div>
             </div>
             <div className='edit-box'>
-                <input className='edit-text' type='password' placeholder='기존 비밀번호'
+                <input className='edit-text' type='password' placeholder='   기존 비밀번호'
                  value={originPw}
                  onChange={onOriginPwHandler}></input>
-                <input className='edit-text' type='password' placeholder='변경할 비밀번호'
+                <input className='edit-text' type='password' placeholder='   변경할 비밀번호'
                  value={changePw}
                  onChange={onChangePwHandler}></input>
-                <input className='edit-text' type='password' placeholder='비밀번호 재확인'
+                <input className='edit-text' type='password' placeholder='   비밀번호 재확인'
                 value={rePw}
                 onChange={onRePwHandler}></input>
             </div>
@@ -72,7 +77,9 @@ function EditPage(props) {
                 <button className='edit-btn'
                 onClick={onSubmitHandler}>변경</button>
             </div>
-            <Footer />
+            <div className='edit-bottom-logo' onClick={goMain}>
+                <img src='image/damoimlogo1.png' className='edit-bottomlogosize'></img>
+            </div>
         </>
     );
 }

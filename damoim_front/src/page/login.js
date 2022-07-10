@@ -42,34 +42,39 @@ const LoginPage = () => {
 
     return (
         <>
-            <div onClick={goMain} className='login-logo'>
-                <p className='name'>DAMOIM <br /> Login Now</p>
+        <div className='loginbox'>
+            <div className='login-logo'>
+                <img src='image/damoimlogo2.png' onClick={goMain}></img>
+                <div className="login_text">Login Now</div>
             </div>
             <div className='login-box'>
-                <input className='login-pw'
+                <input className='login-id'
                     value={id}
                     onChange={onIdHandler}
                     type='text'
-                    placeholder='ID'>
+                    placeholder='  ID'>
                 </input>
                 <input className='login-pw'
                     value={password}
                     onChange={onPasswordHandler}
                     type='password'
-                    placeholder='PW'>
+                    placeholder='  PW'>
                 </input>
             </div>
             <button className='login-btn'
                 onClick={onSubmitHandler}
             >
-                로그인
+                Login
             </button>
             <div className='move-box'>
-                <p className='min-text'><Link to="/edit">비밀번호 변경</Link></p>
-                <p className='min-text'> / </p>
-                <p className='min-text'><Link to="/signUp">회원가입</Link></p>
+                <p className='min-text'>아이디 찾기</p>
+                <Link to="/edit" className='min-text'><p>비밀번호 변경</p></Link>
+                <Link to="/signUp" className='min-text'><p>회원가입</p></Link>
             </div>
-            <Footer />
+            <div className='login-bottom-logo' onClick={goMain}>
+                <img src='image/damoimlogo1.png' className='login-bottomlogosize'></img>
+            </div>
+        </div>
         </>
     );
 }

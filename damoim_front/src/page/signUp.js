@@ -64,39 +64,38 @@ function SignUpPage() {
 
     return (
         <>
-            <div>
-                <p className='name'
-                    onClick={goMain}>
-                    회원가입
-                </p>
+            <div className='signup-top'>
+                <img src='image/damoimlogo2.png' onClick={goMain}></img>
+                <div className='name'>
+                    Sign Up
+                </div>
             </div>
             <div className='sign-box'>
-                <input className='signup-text' type='text' placeholder='ID'
+                <input className='signup-text' type='text' placeholder='   ID'
                     value={id}
                     onChange={onIdHandler}></input>
-                <input className='signup-text' type='password' placeholder='PW'
+                <input className='signup-text' type='password' placeholder='   PW'
                     value={password}
                     onChange={onPasswordHandler}></input>
-                <input className='signup-text' type='text' placeholder='이름'
+                <input className='signup-text' type='text' placeholder='   이름'
                     value={name}
                     onChange={onNameHandler}></input>
-                <input className='signup-text' type='text' placeholder='학과'
+                <input className='signup-text' type='text' placeholder='   학과'
                     value={major}
                     onChange={onMajorHandler}></input>
-                <input className='signup-text' type='text' placeholder='학년'
+                <input className='signup-text' type='text' placeholder='   학년'
                     value={grade}
                     onChange={onGradeHandler}></input>
-                <input className='signup-text' type='text' placeholder='전화번호'
+                <input className='signup-text' type='text' placeholder='   전화번호'
                     value={number}
                     onChange={onNumberHandler}></input>
             </div>
             <div className='button-box'>
-                <button className='signup-btn'
-                    onClick={onSubmitHandler}
-                >
-                    회원가입</button>
+                <button className='signup-btn'onClick={onSubmitHandler}>Sign Up</button>
             </div>
-            <Footer />
+            <div className='signup-bottom-logo' onClick={goMain}>
+                <img src='image/damoimlogo1.png' className='signup-bottomlogosize'></img>
+            </div>
         </>
     );
 }
