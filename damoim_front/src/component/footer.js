@@ -11,13 +11,13 @@ function Footer() {
                 </div>
                 <div className="intro-box">
                     <div className="intro-img">
-                    <img className='logo' src='image/Kit_Logo.png' />
+                        <img className='logo' src='./image/Kit_Logo.png' />
                     </div>
                     <div className="intro-txt">
-                        <p className="txt">운영진 : 안재현<br/>
-                        PM : 정유경<br/>
-                        FRONT-END : 백승민, 임수연<br/>
-                        BACK-END : 김성은, 전용현</p>
+                        <p className="txt">운영진 : 안재현<br />
+                            PM : 정유경<br />
+                            FRONT-END : 백승민, 임수연<br />
+                            BACK-END : 김성은, 전용현</p>
                     </div>
                 </div>
             </div>
