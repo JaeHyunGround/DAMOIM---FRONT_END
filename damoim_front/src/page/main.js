@@ -2,7 +2,7 @@ import { Category } from '../component/category';
 import Footer from '../component/footer';
 import Header from '../component/header';
 
-function mainPage() {
+function MainPage() {
     return (
         <>
             <section id="head">
@@ -23,4 +23,4 @@ function mainPage() {
     );
 }
 
-export default mainPage;
+export default MainPage;

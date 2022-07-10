@@ -1,4 +1,4 @@
-function postPage() {
+function PostPage() {
     return (
         <>
             게시글 페이지
@@ -6,4 +6,4 @@ function postPage() {
     );
 }
 
-export default postPage;
+export default PostPage;
