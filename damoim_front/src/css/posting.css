@@ -14,13 +14,13 @@
     font-size: 11pt;
 }
 
-.post {
+.postBtn {
     text-align: end;
     padding-top: 15px;
     padding-right: 4%;
 }
 
-.post > button {
+.postBtn > button {
     padding: 3px 20px 3px 20px;
     border: 1px solid skyblue;
     background-color: rgb(164, 229, 255);

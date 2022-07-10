@@ -1,8 +1,16 @@
 import '../css/posting.css';
 import Header from "../component/header";
 import Footer from "../component/footer";
+import { useParams } from 'react-router-dom';
 
 function PostingPage() {
+    const urlparam = useParams();
+    let clubName = urlparam.clubName;
+
+    const goDetail = () => {
+        document.location.href = `/club/${clubName}`;
+    }
+
     return (
         <>
             <section id="head">
@@ -11,15 +19,15 @@ function PostingPage() {
 
             <section id="body">
                 <div className="title">
-                    <input type='text' className="titleBox" placeholder="제목" />
+                    <input type='text' className="titleBox" placeholder="제목을 입력하세요." />
                 </div>
 
                 <div className="content">
                     <textarea type='text' className="contentBox" placeholder="내용을 입력하세요." />
                 </div>
 
-                <div className='post'>
-                    <button>
+                <div className='postBtn'>
+                    <button onClick={goDetail}>
                         등 록
                     </button>
                 </div>

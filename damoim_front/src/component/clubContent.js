@@ -1,9 +1,14 @@
 import '../css/clubContent.css';
+import { Link } from 'react-router-dom';
 
-export const ClubContent = () => {
-    const goPosting = () => {
-        document.location.href = "/posting";
-    }
+export const ClubContent = (props) => {
+    // const goPosting = () => {
+    //     document.location.href = "/posting";
+    // }
+
+    let clubName = props.url.clubName;
+    let url = clubName + '/posting';
+    console.log(url)
 
     return (
         <>
@@ -21,9 +26,9 @@ export const ClubContent = () => {
 
             <section className="clubPost">
                 <div className='write'>
-                    <button onClick={goPosting}>
+                    <Link to={`/club/${url}`} >
                         글쓰기
-                    </button>
+                    </Link>
                 </div>
                 <div className='postList'>
                     글 목록

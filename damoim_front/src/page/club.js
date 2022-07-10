@@ -1,9 +1,13 @@
 import Header from "../component/header";
-import { Link } from "react-router-dom";
 import { ClubContent } from "../component/clubContent";
 import Footer from "../component/footer";
+import { useParams } from 'react-router-dom';
 
+// 상세페이지
 function ClubPage() {
+    const urlparam = useParams();
+    console.log(urlparam);
+
     return (
         <>
             <section id="head">
@@ -13,7 +17,9 @@ function ClubPage() {
             <section id="body">
                 동아리 페이지
                 <div>
-                    <ClubContent />
+                    <ClubContent
+                        url={urlparam}
+                    />
                 </div>
             </section>
 
