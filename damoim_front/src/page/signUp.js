@@ -1,11 +1,9 @@
 import '../css/signUp.css';
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { registerUser } from '../actions/user_action';
+import axios from 'axios';
 import Footer from '../component/footer';
 
-function SignUpPage(props) {
-    const dispatch = useDispatch();
+function SignUpPage() {
 
     const [id, setId] = useState("");
     const [password, setPassword] = useState("");
@@ -41,23 +39,23 @@ function SignUpPage(props) {
     const onSubmitHandler = (event) => {
         event.preventDefault();
 
-        let body = {
-            id: id,
-            password: password,
-            name: name,
-            major: major,
+        const body = {
+            user_id: id,
+            department: major,
             grade: grade,
-            number: number
+            phone: number,
+            password: password,
+            name: name
         }
+
+        axios.post("http://115.85.181.24:8000/user/signup/", body)
+        .then(res => res.data)
+        .then(res => {
+            if (res.success) {
+                alert("회원가입 성공!");
+            }
+        })
         
-        dispatch(registerUser(body))
-            .then(response => {
-                if (response.payload.success) {
-                    props.history.push("/singUp")
-                } else {
-                    alert("Failed to sign up")
-                }
-            })
     }
 
     return (
