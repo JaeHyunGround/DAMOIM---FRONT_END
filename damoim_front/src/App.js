@@ -19,7 +19,6 @@ function App() {
   // const login = ({id, password}) => setUser(signIn({id, password}));
   // const logout = () => setUser(null);
 
-
   return (
     <div className="Damoim">
       <Routes>
