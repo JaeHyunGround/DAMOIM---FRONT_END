@@ -1,0 +1,35 @@
+.name{
+    font-size: 3rem;
+    color: skyblue;
+}
+
+.login-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.login-pw{
+    width: 20%;
+    height: 2rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+.login-btn{
+    width: 20%;
+    height: 2rem;
+    background-color: skyblue;
+    color: black;
+    margin-top: 1rem;
+}
+
+.move-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.min-text{
+    font-size: 1rem;
+    margin-left: 1rem;
+}
