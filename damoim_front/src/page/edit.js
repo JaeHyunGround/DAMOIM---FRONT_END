@@ -1,5 +1,6 @@
 import '../css/edit.css';
-import React, { useState } from 'react';
+import React, { useState } from 'react'
+import axios from 'axios';
 import Footer from '../component/footer';
 
 function EditPage(props) {
@@ -20,7 +21,12 @@ function EditPage(props) {
         setRePw(event.currentTarget.value)
     }
 
-    const onSubmitHandler = (event) => {
+    const onSubmitHandler = () => {
+        const body = {
+            originpassword: originPw,
+            changepassword: changePw,
+            repassword: rePw
+        }
         
         //기존비번과 입력한 비번 일치 확인
         //변경한 것과 재확인 비번 일치 확인
@@ -33,14 +39,17 @@ function EditPage(props) {
         } else if(originPw === "" || changePw === "" || rePw === ""){
             alert("입력해주세요.");
         } else {
-            alert("비밀번호가 변경되었습니다.");
+            axios.post("http://115.85.181.24:8000/user/signup/", body)
+            .then(res => res.data)
+            .then(res => {
+            if (res.success) {
+                alert("비밀번호가 변경되었습니다.");
+            } else{
+                alert('Error!');
+            }
+        })
         }
         
-        const body = {
-            originpassword: originPw,
-            changepassword: changePw,
-            repassword: rePw
-        }
     }
 
     return (
