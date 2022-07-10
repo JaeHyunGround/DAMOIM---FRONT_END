@@ -4,26 +4,28 @@
     justify-content: space-around;
 }
 
-.headLeft {
+.bottomLeft {
     width: 20%;
+    margin-right: 10%;
 }
 
 .logo {
-    width: 120px;
+    width: 70px;
 }
 
 .headCenter {
-    width: 60%;
+    width: 80%;
+    padding-left: 15%;
 }
 
-.headCenter > a {
+.headCenter > img {
     cursor: pointer;
 }
 
 .headRight {
     display: flex;
     width: 20%;
-    padding-top: 60px;
+    padding-top: 85px;
     list-style: none;
 }
 
@@ -33,10 +35,22 @@
 
 .headBottom {
     display: flex;
-    justify-content: space-around;
-    padding: 10px 80px 10px 80px;
-    margin: 10px 0 10px 0;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20% 10px 0;
+    margin-bottom: 10px;
+    border-top: 4px solid hsl(203, 92%, 75%, 0.5);
+    border-bottom: 4px solid hsl(203, 92%, 75%, 0.5);
     list-style: none;
+}
+
+.clubCategory {
+    display: flex;
+    font-size: 18pt;
+    width: 20%;
+}
+
+.clubCategory > a {
+    width: 90%;
+    margin-right: 5%;
 }
