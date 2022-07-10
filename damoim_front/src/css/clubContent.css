@@ -28,7 +28,7 @@
     padding-right: 2%;
 }
 
-.write > button {
+.writeBtn {
     padding: 4px;
     border: 1px solid skyblue;
     background-color: rgb(164, 229, 255);
@@ -37,8 +37,22 @@
     cursor: pointer;
 }
 
-.postList {
+.listTop {
+    display: flex;
+    justify-content: space-around;
     margin-top: 10px;
     border-top: 4px solid lightblue;
     border-bottom: 4px solid lightblue;
+}
+
+.postId {
+}
+
+.postTitle {
+    width: 80%;
+    background-color: lightcoral;
+}
+
+.postDate {
+    width: 10%;
 }

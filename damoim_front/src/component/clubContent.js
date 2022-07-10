@@ -26,7 +26,12 @@ export const ClubContent = (props) => {
 
             <section className="clubPost">
                 <div className='write'>
-                    <Link to={`/club/${url}`} >
+                    <Link className='writeBtn'
+                        to={`/club/${url}`}
+                        style={{
+                            textDecoration: 'none',
+                            color: 'black'
+                        }}>
                         글쓰기
                     </Link>
                 </div>
