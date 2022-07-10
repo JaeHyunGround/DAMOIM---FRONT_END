@@ -7,6 +7,7 @@ function Header() {
     const clubdata = getData();
     const category = [];
     const [isLogin, setIsLogin] = useState(false);
+    const [textColor, setTextColor] = useState('black');
 
     clubdata.map((club) => {
         if (!category.includes(club.type))
@@ -20,49 +21,44 @@ function Header() {
     return (
         <>
             <section className='headTop'>
-                <div className='headLeft'>
-                    <Link to="/">
-                        <img className='logo' src='/image/Kit_Logo.png' />
-                    </Link>
-                </div>
-
                 <div className='headCenter'>
-                    <a onClick={goMain}>
-                        DAMOIM
-                    </a>
+                    <img onClick={goMain} src='/image/damoimlogo3.png' />
                 </div>
 
                 <div className='headRight'>
                     <li>
-                        <Link to="/login"
-                            style={{
-                                textDecoration: 'none',
-                                color: 'black'
-                            }}>
-                            로그인
+                        <Link to="/login">
+                            <img src='/image/login.png' />
                         </Link>
                     </li>
                     <li>
-                        <Link to="/signUp"
-                            style={{
-                                textDecoration: 'none',
-                                color: 'black'
-                            }}>
-                            회원가입
+                        <Link to="/signUp">
+                            <img src='/image/signup.png' />
                         </Link>
                     </li>
                 </div>
             </section>
 
             <section className='headBottom'>
-                {category.map((type) => (
-                    <Link to={`/${type}`}
-                        style={{
-                            textDecoration: 'none',
-                            color: 'black'
-                        }}>
-                        <li>{type}</li>
+                <div className='bottomLeft'>
+                    <Link to="/">
+                        <img className='logo' src='/image/damoimlogo1.png' />
                     </Link>
+                </div>
+
+                {category.map((type, idx) => (
+                    <li className='clubCategory'>
+                        <a href={`/${type}`}
+                            style={{
+                                textDecoration: 'none',
+                                color: 'black'
+                            }}>
+                            {type}
+                        </a>
+                        {idx < (category.length - 1) ?
+                            <div className='line'>ㅣ</div> :
+                            ""}
+                    </li>
                 ))}
             </section>
         </>
