@@ -26,12 +26,20 @@ function Header() {
 
                 <div className='headRight'>
                     <li>
-                        <Link to="/login" style={{ textDecoration: 'none' }}>
+                        <Link to="/login"
+                            style={{
+                                textDecoration: 'none',
+                                color: 'black'
+                            }}>
                             로그인
                         </Link>
                     </li>
                     <li>
-                        <Link to="/signUp" style={{ textDecoration: 'none' }}>
+                        <Link to="/signUp"
+                            style={{
+                                textDecoration: 'none',
+                                color: 'black'
+                            }}>
                             회원가입
                         </Link>
                     </li>
@@ -40,7 +48,11 @@ function Header() {
 
             <section className='headBottom'>
                 {category.map((type) => (
-                    <Link to={`/${type}`} style={{ textDecoration: 'none' }}>
+                    <Link to={`/${type}`}
+                        style={{
+                            textDecoration: 'none',
+                            color: 'black'
+                        }}>
                         <li>{type}</li>
                     </Link>
                 ))}
