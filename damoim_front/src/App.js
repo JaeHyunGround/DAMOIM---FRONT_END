@@ -26,11 +26,11 @@ function App() {
           <Route path='/:category' element={<Category />} />
         </Route>
         <Route path='/club/:clubName' element={<ClubPage />} />
+        <Route path='/club/:clubName/posting' element={<PostingPage />} />
+        <Route path='/club/:clubName/post' element={<PostPage />} />
         <Route path='/signUp' element={<SignUpPage />} />
         <Route path='/login' element={<LoginPage />} />
         <Route path='/edit' element={<EditPage />} />
-        <Route path='/posting' element={<PostingPage />} />
-        <Route path='/post' element={<PostPage />} />
       </Routes>
     </div>
   );
