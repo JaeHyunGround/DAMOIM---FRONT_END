@@ -10,7 +10,6 @@ function MainPage() {
             </section>
 
             <section id="body">
-                메인 페이지
                 <div>
                     <Category />
                 </div>

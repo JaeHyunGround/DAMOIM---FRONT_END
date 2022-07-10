@@ -8,7 +8,7 @@ function PostingPage() {
     let clubName = urlparam.clubName;
 
     const goDetail = () => {
-        document.location.href = `/club/${clubName}`;
+        document.location.href = `/club/${clubName}/post`;
     }
 
     return (
