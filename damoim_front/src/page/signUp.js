@@ -4,7 +4,6 @@ import axios from 'axios';
 import Footer from '../component/footer';
 
 function SignUpPage() {
-
     const [id, setId] = useState("");
     const [password, setPassword] = useState("");
     const [name, setName] = useState("");
@@ -48,46 +47,52 @@ function SignUpPage() {
             name: name
         }
 
-        axios.post("http://115.85.181.24:8000/user/signup/", body)
-        .then(res => res.data)
-        .then(res => {
-            if (res.success) {
+        const URL = 'http://115.85.181.24:8000/account/signup/';
+        axios.post(URL, body)
+            .then((res) => {
                 alert("회원가입 성공!");
-            } else{
-                alert('Error!');
-            }
-        })
-        
+                document.location.href = "/login";
+            })
+            .catch((error) => {
+                console.log(`에러다${error}`)
+            });
+    }
+
+    const goMain = () => {
+        document.location.href = "/";
     }
 
     return (
         <>
             <div>
-                <p className='name'>회원가입</p>
+                <p className='name'
+                    onClick={goMain}>
+                    회원가입
+                </p>
             </div>
             <div className='sign-box'>
                 <input className='signup-text' type='text' placeholder='ID'
-                 value={id} 
-                 onChange={onIdHandler}></input>
+                    value={id}
+                    onChange={onIdHandler}></input>
                 <input className='signup-text' type='password' placeholder='PW'
-                 value={password}
-                  onChange={onPasswordHandler}></input>
+                    value={password}
+                    onChange={onPasswordHandler}></input>
                 <input className='signup-text' type='text' placeholder='이름'
-                 value={name}
-                  onChange={onNameHandler}></input>
+                    value={name}
+                    onChange={onNameHandler}></input>
                 <input className='signup-text' type='text' placeholder='학과'
-                 value={major}
-                  onChange={onMajorHandler}></input>
+                    value={major}
+                    onChange={onMajorHandler}></input>
                 <input className='signup-text' type='text' placeholder='학년'
-                 value={grade}
-                  onChange={onGradeHandler}></input>
+                    value={grade}
+                    onChange={onGradeHandler}></input>
                 <input className='signup-text' type='text' placeholder='전화번호'
-                 value={number}
-                  onChange={onNumberHandler}></input>
+                    value={number}
+                    onChange={onNumberHandler}></input>
             </div>
             <div className='button-box'>
-                <button className='signup-btn' 
-                onClick={onSubmitHandler}
+                <button className='signup-btn'
+                    onClick={onSubmitHandler}
                 >
                     회원가입</button>
             </div>

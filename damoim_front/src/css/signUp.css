@@ -1,6 +1,7 @@
 .name{
     font-size: 3rem;
     color: skyblue;
+    cursor: pointer;
 }
 
 .sign-box{
