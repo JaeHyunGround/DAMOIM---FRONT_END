@@ -1,5 +1,6 @@
 import Footer from "../component/footer";
 import Header from "../component/header";
+import PostList from "../component/postList";
 import { useParams } from 'react-router-dom';
 
 import { useState, useEffect } from 'react';
@@ -13,15 +14,6 @@ function PostPage() {
         document.location.href = `/club/${clubName}`;
     }
 
-    const [test, setTest] = useState([]);
-
-    useEffect(() => {
-        axios({
-            method: 'GET',
-            url: 'https://jsonplaceholder.typicode.com/posts',
-        }).then(res => setTest(res.data))
-    })
-
     return (
         <>
             <section id="head">
@@ -29,25 +21,9 @@ function PostPage() {
             </section>
 
             <section id="body">
-                <div className="postList">
-                    <div className="listTop">
-                        <span className="postId">번호</span>
-                        <span className="postTitle">제목</span>
-                        <span className="postDate">날짜</span>
-                    </div>
-                    <div>
-                        {test.map(data => (
-                            <li key={test.id}>
-                                {test.title}
-                            </li>
-                        ))}
-                    </div>
-                </div>
-                <div className="post">
-                    작성한 게시물
-                </div>
+                <PostList />
                 <div>
-                    <button onClick={goDetail}>
+                    <button onClick={goDetail} className='detailBtn'>
                         동아리 페이지로
                     </button>
                 </div>

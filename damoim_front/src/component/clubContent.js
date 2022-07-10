@@ -1,5 +1,6 @@
 import '../css/clubContent.css';
 import { Link } from 'react-router-dom';
+import PostList from './postList';
 
 export const ClubContent = (props) => {
     // const goPosting = () => {
@@ -8,7 +9,6 @@ export const ClubContent = (props) => {
 
     let clubName = props.url.clubName;
     let url = clubName + '/posting';
-    console.log(url)
 
     return (
         <>
@@ -17,11 +17,17 @@ export const ClubContent = (props) => {
                 <div>
                     <h3 className='clubName'>동아리 이름</h3>
                     <h4>동아리 소개: </h4>
-                    <a className="contact">
+                    <a className='clubIntro'>
+                        동아리 소개글입니다.
+                    </a>
+                    <a href="" className="contact">
                         문의하기
                     </a>
                 </div>
-                <a className='clubLocation'>동아리방 위치: </a>
+                <a className='clubLocation'>
+                    동아리방 위치:
+                    동방 위치는 다음과 같습니다.
+                </a>
             </section>
 
             <section className="clubPost">
@@ -36,7 +42,7 @@ export const ClubContent = (props) => {
                     </Link>
                 </div>
                 <div className='postList'>
-                    글 목록
+                    <PostList />
                 </div>
             </section>
         </>

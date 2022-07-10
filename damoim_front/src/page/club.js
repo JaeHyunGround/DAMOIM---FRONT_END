@@ -6,7 +6,6 @@ import { useParams } from 'react-router-dom';
 // 상세페이지
 function ClubPage() {
     const urlparam = useParams();
-    console.log(urlparam);
 
     return (
         <>

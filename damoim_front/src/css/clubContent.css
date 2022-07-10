@@ -1,11 +1,12 @@
 .clubInfo {
     display: flex;
     justify-content: space-around;
-    padding-bottom: 100px;
+    padding-bottom: 80px;
 }
 
 .clubInfo > img {
-    width: 150px;
+    width: 180px;
+    border: 8px #87CEFA solid;
 }
 
 .clubInfo > div {
@@ -14,8 +15,18 @@
     text-align: start;
 }
 
+.clubInfo > div > h4 {
+    vertical-align: top;
+}
+
 .clubName {
     border-bottom: 2px solid #87CEFA;
+}
+
+.contact {
+    padding-top: 20%;
+    text-decoration: none;
+    color: black;
 }
 
 .clubLocation {
@@ -49,10 +60,19 @@
 }
 
 .postTitle {
-    width: 80%;
+    width: 85%;
     background-color: lightcoral;
 }
 
 .postDate {
-    width: 10%;
+    width: 5%;
+}
+
+.detailBtn {
+    padding: 6px 12px 6px 12px;
+    border: 1px solid skyblue;
+    background-color: rgb(164, 229, 255);
+    font-size: smaller;
+    font-weight: bold;
+    cursor: pointer;
 }
