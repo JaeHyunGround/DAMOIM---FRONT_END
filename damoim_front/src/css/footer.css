@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     width: 100%;
-    height: 200px;
+    height: 300px;
     margin-top: 300px;
     flex-direction: row;
     background-color: hsl(203, 92%, 75%, 0.5);
@@ -12,16 +12,26 @@
 .idea-box{
     display: flex;
     width: 50%;
+    height: 100%;
     flex-direction: row;
-    padding-left: 20%;
+    margin: 0 auto;
+    padding-left: 15%;
 }
 
 .idea-img{
-
+    margin: 1rem;
 }
 
-.idea-text{
 
+.idea-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.idea{
+    font-size: 20px;
 }
 
 .idea{
@@ -31,21 +41,32 @@
 .intro-box {
     display: flex;
     width: 50%;
+    height: 100%;
     flex-direction: row;
     margin: 0 auto;
 }
 
-.logo{
+.intro-img{
+    margin: 1rem;
+}
 
+.footer-logo{
+    width: 100%;
+    height: 60%;
+    margin: 3rem auto;
 }
 
 .intro-txt{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 5rem;
+    margin: 3rem;
 }
 
 .txt{
     margin: 0;
+    font-weight: bold;
+    font-size: large;
+    text-align: left;
+    line-height: 200%;
 }
