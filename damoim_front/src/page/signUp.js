@@ -53,6 +53,8 @@ function SignUpPage() {
         .then(res => {
             if (res.success) {
                 alert("회원가입 성공!");
+            } else{
+                alert('Error!');
             }
         })
         
