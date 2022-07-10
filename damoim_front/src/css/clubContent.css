@@ -1,38 +1,60 @@
-/* 동아리 상세 페이지 */
+/* clubContent 속성(페이지 내용) */
 .clubInfo {
     display: flex;
     justify-content: space-around;
+    min-width: 1200px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    margin-bottom: 60px;
+    background-color: hsl(203, 92%, 75%, 0.5);
+}
+
+.infoLeft {
+    display: flex;
     padding-bottom: 80px;
 }
 
-.clubInfo > img {
-    width: 180px;
-    border: 8px #87CEFA solid;
+.leftImg {
+    width: 200px;
+    height: fit-content;
+    background-color: white;
 }
 
-.clubInfo > div {
+.leftImg > img {
+    width: 100%;
+}
+
+.infoLeft > div {
     display: flex;
     flex-direction: column;
     text-align: start;
 }
 
-.clubInfo > div > h4 {
+.infoLeft > div > h4 {
     vertical-align: top;
 }
 
 .clubName {
+    text-align: center;
     border-bottom: 2px solid #87CEFA;
 }
 
 .contact {
+    width: 90px;
     padding-top: 20%;
-    text-decoration: none;
-    color: black;
+}
+
+.contact > img {
+    width: 100%;
 }
 
 .clubLocation {
     width: 50%;
     text-align: start;
+}
+
+.clubPost {
+    min-width: 1200px;
 }
 
 .write {
@@ -41,42 +63,75 @@
 }
 
 .writeBtn {
-    padding: 4px;
-    border: 1px solid skyblue;
-    background-color: rgb(164, 229, 255);
+    padding: 6px;
+    border-radius: 10px;
+    background-color: #87CEFE;
+    border: 1px solid #87CEFE;
     font-size: smaller;
     font-weight: bold;
     cursor: pointer;
 }
 
+/* postList.js 속성(글 목록) */
+.postList {
+    margin-bottom: 20px;
+}
 
-/* 글 목록 컴포넌트 */
 .listTop {
     display: flex;
     justify-content: space-around;
-    margin-top: 10px;
+    margin-top: 15px;
     border-top: 4px solid lightblue;
     border-bottom: 4px solid lightblue;
 }
-.postId {
+
+.list {
+    padding: 2px;
+    border-bottom: 2px solid;
+}
+
+.list > li {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.topID {
+    text-align: center;
+}
+
+.topTitle {
+    width: 85%;
+    text-align: center;
+    background-color: lightcoral;
+}
+
+.topDate {
+    width: 5%;
+    text-align: center;
+}
+
+.postID {
+    text-align: center;
 }
 
 .postTitle {
     width: 85%;
-    background-color: lightcoral;
+    text-align: center;
 }
 
 .postDate {
     width: 5%;
+    text-align: center;
 }
 
-
-/* 게시글 컴포넌트 */
+/* post페이지 속성(버튼) */
 .detailBtn {
-    padding: 6px 12px 6px 12px;
-    border: 1px solid skyblue;
-    background-color: rgb(164, 229, 255);
-    font-size: smaller;
+    padding: 6px 40px 6px 40px;
+    background-color: #87CEFE;
+    border: 1px solid #87CEFE;
+    border-radius: 10px;
+    font-size: 11pt;
     font-weight: bold;
     cursor: pointer;
 }

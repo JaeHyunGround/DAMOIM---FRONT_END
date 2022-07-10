@@ -1,13 +1,17 @@
 .titleBox {
     width: 90%;
+    border: 3px solid #87CEFE;
+    border-radius: 10px;
     font-size: 18pt;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-top: 20px;
     padding: 8px;
 }
 
 .contentBox {
     width: 90%;
+    border: 3px solid #87CEFE;
+    border-radius: 10px;
     resize: none;
     height: 500px;
     padding: 10px;
@@ -17,14 +21,15 @@
 .postBtn {
     text-align: end;
     padding-top: 15px;
-    padding-right: 4%;
 }
 
 .postBtn > button {
-    padding: 3px 20px 3px 20px;
-    border: 1px solid skyblue;
-    background-color: rgb(164, 229, 255);
+    padding: 4px 30px 4px 30px;
+    background-color: #87CEFE;
+    border: 1px solid #87CEFE;
+    border-radius: 10px;
     font-size: 12pt;
     font-weight: bold;
     cursor: pointer;
+    margin-right: 4%;
 }

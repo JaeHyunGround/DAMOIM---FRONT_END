@@ -2,6 +2,7 @@ import Footer from "../component/footer";
 import Header from "../component/header";
 import PostList from "../component/postList";
 import { useParams } from 'react-router-dom';
+import { Post } from "../component/post";
 
 function PostPage() {
     const urlparam = useParams();
@@ -17,12 +18,17 @@ function PostPage() {
                 <Header />
             </section>
 
-            <section id="body">
-                <PostList />
+
+
+            <section className="body">
                 <div>
-                    <button onClick={goDetail} className='detailBtn'>
-                        동아리 페이지로
-                    </button>
+                    <PostList />
+                    <Post />
+                    <div>
+                        <button onClick={goDetail} className='detailBtn'>
+                            동아리 페이지로
+                        </button>
+                    </div>
                 </div>
             </section>
 

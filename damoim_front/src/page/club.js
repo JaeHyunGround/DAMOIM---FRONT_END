@@ -14,7 +14,6 @@ function ClubPage() {
             </section>
 
             <section id="body">
-                동아리 페이지!
                 <div>
                     <ClubContent
                         url={urlparam}

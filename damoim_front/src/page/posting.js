@@ -17,7 +17,7 @@ function PostingPage() {
                 <Header />
             </section>
 
-            <section id="body">
+            <section className="body">
                 <div className="title">
                     <input type='text' className="titleBox" placeholder="제목을 입력하세요." />
                 </div>

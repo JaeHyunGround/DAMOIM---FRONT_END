@@ -14,21 +14,18 @@ function PostList() {
         <>
             <div className="postList">
                 <div className="listTop">
-                    <span className="postId">번호</span>
-                    <span className="postTitle">제목</span>
-                    <span className="postDate">날짜</span>
+                    <span className="topId">번호</span>
+                    <span className="topTitle">제목</span>
+                    <span className="topDate">날짜</span>
                 </div>
-                <div className="post">
-                    <span className="postId">번호</span>
-                    <span className="postTitle">제목</span>
-                    <span className="postDate">날짜</span>
-                    <ul>
-                        {posts.map((post) => (
-                            <li key={post.id}>
-                                {post.status}
-                            </li>
-                        ))}
-                    </ul>
+                <div className="list">
+                    {posts.map((post) => (
+                        <li key={post.id}>
+                            <span className="postId">{post.useCount}</span>
+                            <span className="postTitle">{post.identity}</span>
+                            <span className="postDate">{post.status}</span>
+                        </li>
+                    ))}
                 </div>
             </div>
         </>
