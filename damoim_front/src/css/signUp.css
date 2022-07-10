@@ -1,6 +1,12 @@
+.signup-top{
+    margin: 0 auto;
+    margin-top: 32px;
+    cursor: pointer;
+}
+
 .name{
     font-size: 3rem;
-    color: skyblue;
+    color: #87CEFE;
     cursor: pointer;
 }
 
@@ -10,19 +16,34 @@
 }
 
 .signup-text{
-    width: 20%;
-    height: 2rem;
+    width: 30%;
+    height: 2.9rem;
+    font-size: 1.4rem;
+    border-radius: 10px;
     margin: 0 auto;
-    margin-top: 1rem;
+    margin-top: 2rem;
+    box-shadow: 0px 4px 7px -4px gray;
 }
 
 .signup-btn{
-    width: 20%;
-    height: 2rem;
+    width: 30%;
+    height: 3rem;
+    font-size: 1.4rem;
+    border-radius: 10px;
     margin: 0 auto;
-    background-color: skyblue;
+    background-color: #87CEFE;
+    border: 1px solid #87CEFE;
     color: black;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+.signup-bottom-logo {
+    display: flex;
+    margin-left: 50px;
+    margin-top: -120px;
+    cursor: pointer;
+}
+
+.signup-bottomlogosize {
+    width: 150px;
 }

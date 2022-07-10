@@ -1,3 +1,4 @@
+/* 동아리 상세 페이지 */
 .clubInfo {
     display: flex;
     justify-content: space-around;
@@ -48,6 +49,8 @@
     cursor: pointer;
 }
 
+
+/* 글 목록 컴포넌트 */
 .listTop {
     display: flex;
     justify-content: space-around;
@@ -55,7 +58,6 @@
     border-top: 4px solid lightblue;
     border-bottom: 4px solid lightblue;
 }
-
 .postId {
 }
 
@@ -68,6 +70,8 @@
     width: 5%;
 }
 
+
+/* 게시글 컴포넌트 */
 .detailBtn {
     padding: 6px 12px 6px 12px;
     border: 1px solid skyblue;
