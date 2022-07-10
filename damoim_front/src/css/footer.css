@@ -1,0 +1,45 @@
+.footer-box{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    background-color: skyblue;
+}
+
+.idea-box{
+    display: flex;
+    flex-direction: row;
+}
+
+.idea-img{
+
+}
+
+.idea-text{
+
+}
+
+.idea{
+
+}
+
+.intro-box {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+.logo{
+
+}
+
+.intro-txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.txt{
+    margin: 0;
+}

@@ -1,0 +1,27 @@
+.name{
+    font-size: 3rem;
+    color: skyblue;
+}
+
+.sign-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-text{
+    width: 20%;
+    height: 2rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+.signup-btn{
+    width: 20%;
+    height: 2rem;
+    margin: 0 auto;
+    background-color: skyblue;
+    color: black;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}

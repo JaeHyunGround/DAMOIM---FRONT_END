@@ -1,0 +1,26 @@
+.name{
+    font-size: 3rem;
+    color: skyblue;
+}
+
+.edit-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-text{
+    width: 20%;
+    height: 2rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+.edit-btn{
+    width: 20%;
+    height: 2rem;
+    margin: 0 auto;
+    background-color: skyblue;
+    color: black;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
