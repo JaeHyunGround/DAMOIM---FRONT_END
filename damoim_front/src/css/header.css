@@ -16,6 +16,10 @@
     width: 60%;
 }
 
+.headCenter > a {
+    cursor: pointer;
+}
+
 .headRight {
     display: flex;
     width: 20%;

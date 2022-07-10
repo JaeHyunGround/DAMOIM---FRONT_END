@@ -3,9 +3,6 @@ import Header from "../component/header";
 import PostList from "../component/postList";
 import { useParams } from 'react-router-dom';
 
-import { useState, useEffect } from 'react';
-import axios from 'axios';
-
 function PostPage() {
     const urlparam = useParams();
     let clubName = urlparam.clubName;

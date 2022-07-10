@@ -1,3 +1,7 @@
+.login-logo {
+    cursor: pointer;
+}
+
 .name{
     font-size: 3rem;
     color: skyblue;

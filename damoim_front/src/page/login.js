@@ -18,8 +18,8 @@ const LoginPage = () => {
         setPassword(event.currentTarget.value)
     }
 
-    const onSubmitHandler = () => {           
-        
+    const onSubmitHandler = () => {
+
         // event.preventDefault();
         const body = {
             id: id,
@@ -27,38 +27,42 @@ const LoginPage = () => {
         }
 
         axios.get('http://115.85.181.24:8083/scooter/state')
-        .then(res => {
-            setTest(res.data);
-        })
+            .then(res => {
+                setTest(res.data);
+            })
     }
 
     useEffect(() => {
         console.log(test);
     }, [test]);
 
+    const goMain = () => {
+        document.location.href = "/";
+    }
+
     return (
         <>
-            <div>
-                <p className='name'>DAMOIM <br/> Login Now</p>
+            <div onClick={goMain} className='login-logo'>
+                <p className='name'>DAMOIM <br /> Login Now</p>
             </div>
             <div className='login-box'>
                 <input className='login-pw'
-                 value={id}
-                 onChange={onIdHandler}
-                 type='text' 
-                 placeholder='ID'>
-                 </input>
+                    value={id}
+                    onChange={onIdHandler}
+                    type='text'
+                    placeholder='ID'>
+                </input>
                 <input className='login-pw'
-                 value={password}
-                 onChange={onPasswordHandler}
-                 type='password'
-                 placeholder='PW'>
-                 </input>
+                    value={password}
+                    onChange={onPasswordHandler}
+                    type='password'
+                    placeholder='PW'>
+                </input>
             </div>
             <button className='login-btn'
-             onClick={onSubmitHandler}
+                onClick={onSubmitHandler}
             >
-             로그인
+                로그인
             </button>
             <div className='move-box'>
                 <p className='min-text'><Link to="/edit">비밀번호 변경</Link></p>

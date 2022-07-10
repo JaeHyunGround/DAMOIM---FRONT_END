@@ -3,10 +3,6 @@ import { Link } from 'react-router-dom';
 import PostList from './postList';
 
 export const ClubContent = (props) => {
-    // const goPosting = () => {
-    //     document.location.href = "/posting";
-    // }
-
     let clubName = props.url.clubName;
     let url = clubName + '/posting';
 
