@@ -72,7 +72,7 @@ function Header() {
                                 </Link>
                             </span>
                             <span>
-                                <Link to="/edit" className='myMenu'>
+                                <Link to="/signUp" className='myMenu'>
                                     <img src='/image/signup.png' />
                                 </Link>
                             </span>
