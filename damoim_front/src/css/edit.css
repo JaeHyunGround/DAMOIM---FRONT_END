@@ -1,6 +1,9 @@
 .edit-top {
     margin: 0 auto;
     margin-top: 123px;
+}
+
+.edit-top > img {
     cursor: pointer;
 }
 
@@ -43,14 +46,15 @@
     background-color: #87CEFE;
     border: 1px solid #87CEFE;
     color: black;
+    cursor: pointer;
 }
 
 .edit-bottom-logo {
     display: flex;
     margin-left: 50px;
-    cursor: pointer;
 }
 
 .edit-bottomlogosize {
     width: 150px;
+    cursor: pointer;
 }

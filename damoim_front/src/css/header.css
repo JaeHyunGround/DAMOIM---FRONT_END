@@ -27,11 +27,19 @@
     display: flex;
     width: 20%;
     padding-top: 85px;
-    list-style: none;
+    padding-right: 20px;
 }
 
-.headRight > li {
+.headRight > div {
+    display: flex;
+}
+
+.headRight > div > span {
     padding: 10px;
+}
+
+.myMenu > img {
+    width: 100%;
 }
 
 .headBottom {

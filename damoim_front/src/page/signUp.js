@@ -1,7 +1,6 @@
 import '../css/signUp.css';
 import React, { useState } from 'react';
 import axios from 'axios';
-import Footer from '../component/footer';
 
 function SignUpPage() {
     const [id, setId] = useState("");
@@ -10,6 +9,7 @@ function SignUpPage() {
     const [major, setMajor] = useState("");
     const [grade, setGrade] = useState("");
     const [number, setNumber] = useState("");
+    const [isLogin, setIsLogin] = useState(false)
 
     const onIdHandler = (event) => {
         setId(event.currentTarget.value)
@@ -91,10 +91,10 @@ function SignUpPage() {
                     onChange={onNumberHandler}></input>
             </div>
             <div className='button-box'>
-                <button className='signup-btn'onClick={onSubmitHandler}>Sign Up</button>
+                <button className='signup-btn' onClick={onSubmitHandler}>Sign Up</button>
             </div>
-            <div className='signup-bottom-logo' onClick={goMain}>
-                <img src='image/damoimlogo1.png' className='signup-bottomlogosize'></img>
+            <div className='signup-bottom-logo'>
+                <img src='image/damoimlogo1.png' className='signup-bottomlogosize' onClick={goMain}></img>
             </div>
         </>
     );

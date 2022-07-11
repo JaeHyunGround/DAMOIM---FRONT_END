@@ -4,9 +4,9 @@
     justify-content: space-around;
     min-width: 1200px;
     padding-top: 30px;
-    padding-bottom: 20px;
     margin-bottom: 60px;
     background-color: hsl(203, 92%, 75%, 0.5);
+    font-size: 1.2rem;
 }
 
 .infoLeft {
@@ -15,7 +15,8 @@
 }
 
 .leftImg {
-    width: 200px;
+    width: 350px;
+    margin-right: 50px;
     height: fit-content;
     background-color: white;
 }
@@ -51,6 +52,7 @@
 .clubLocation {
     width: 50%;
     text-align: start;
+    margin-top: 15px;
 }
 
 .clubPost {
@@ -103,7 +105,7 @@
 .topTitle {
     width: 85%;
     text-align: center;
-    background-color: lightcoral;
+    background-color: hsl(203, 92%, 75%, 0.5);
 }
 
 .topDate {

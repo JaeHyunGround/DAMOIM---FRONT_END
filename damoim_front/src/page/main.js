@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Category } from '../component/category';
 import Footer from '../component/footer';
@@ -16,7 +15,7 @@ function MainPage() {
                     <Category />
                 </div>
             </section>
-
+            <img src='/image/HOME_image.png' style={{ width: '50%' }}></img>
             <section id="bottom">
                 <Footer />
             </section>

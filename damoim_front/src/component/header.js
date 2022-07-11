@@ -1,21 +1,45 @@
 import '../css/header.css';
 import { Link } from 'react-router-dom';
-import { getData } from '../clubData';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 function Header() {
-    const clubdata = getData();
-    const category = [];
-    const [isLogin, setIsLogin] = useState(false);
-    const [textColor, setTextColor] = useState('black');
+    const [data, setData] = useState([]);
+    const URL = 'http://115.85.181.24:8000'
 
-    clubdata.map((club) => {
-        if (!category.includes(club.type))
-            category.push(club.type)
+    useEffect(() => {
+        axios.get(URL)
+            .then(res => setData(res.data))
+    }, [])
+
+    const category = [];
+    const [isLogin, setIsLogin] = useState('false');
+
+    data.map((club) => {
+        if (!category.includes(club.group_category))
+            category.push(club.group_category)
     })
 
     const goMain = () => {
         document.location.href = "/";
+    }
+
+    axios.get('http://115.85.181.24:8000/account/login/check', {
+        headers: {
+            Authorization: localStorage.getItem('token')
+        }
+    }).then((res) => {
+        // setIsLogin('true');
+        if (res.data.is_login === 'true') {
+            setIsLogin('true')
+        } else {
+            setIsLogin('false')
+        }
+    })
+
+    const tokenClear = () => {
+        localStorage.clear()
+        window.location.replace('/')
     }
 
     return (
@@ -26,16 +50,33 @@ function Header() {
                 </div>
 
                 <div className='headRight'>
-                    <li>
-                        <Link to="/login">
-                            <img src='/image/login.png' />
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/signUp">
-                            <img src='/image/signup.png' />
-                        </Link>
-                    </li>
+                    {(isLogin) == 'true' ?
+                        <div>
+                            <span>
+                                <Link to="/" className='myMenu'>
+                                    <img src='/image/logout.png' onClick={tokenClear} />
+                                </Link>
+                            </span>
+                            <span>
+                                <Link to="/edit" className='myMenu'>
+                                    <img src='/image/edit.png' />
+                                </Link>
+                            </span>
+                        </div>
+                        :
+                        <div>
+                            <span>
+                                <Link to="/login" className='myMenu'>
+                                    <img src='/image/login.png' />
+                                </Link>
+                            </span>
+                            <span>
+                                <Link to="/edit" className='myMenu'>
+                                    <img src='/image/signup.png' />
+                                </Link>
+                            </span>
+                        </div>
+                    }
                 </div>
             </section>
 

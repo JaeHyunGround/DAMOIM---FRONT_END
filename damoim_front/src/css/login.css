@@ -44,6 +44,7 @@
     background-color: #87CEFE;
     border: 1px solid #87CEFE;
     color: black;
+    cursor: pointer;
 }
 
 .move-box{
@@ -67,9 +68,9 @@
 .login-bottom-logo {
     display: flex;
     margin-left: 50px;
-    cursor: pointer;
 }
 
 .login-bottomlogosize {
     width: 150px;
+    cursor: pointer;
 }

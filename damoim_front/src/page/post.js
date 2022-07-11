@@ -3,6 +3,7 @@ import Header from "../component/header";
 import PostList from "../component/postList";
 import { useParams } from 'react-router-dom';
 import { Post } from "../component/post";
+import { useState } from 'react';
 
 function PostPage() {
     const urlparam = useParams();
