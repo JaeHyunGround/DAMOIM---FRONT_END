@@ -35,15 +35,17 @@
     border: 1px solid #87CEFE;
     color: black;
     margin-top: 2rem;
+    cursor: pointer;
 }
 
 .signup-bottom-logo {
     display: flex;
     margin-left: 50px;
     margin-top: -120px;
-    cursor: pointer;
+    /* z-index: -1; */
 }
 
 .signup-bottomlogosize {
     width: 150px;
+    cursor: pointer;
 }

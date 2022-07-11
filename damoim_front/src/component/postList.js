@@ -3,7 +3,7 @@ import axios from 'axios';
 
 function PostList() {
     const [posts, setPosts] = useState([]);
-    const URL = 'http://115.85.181.24:8083/scooter/state'
+    const URL = 'http://115.85.181.24:8000'
 
     useEffect(() => {
         axios.get(URL)

@@ -2,10 +2,11 @@ import Header from "../component/header";
 import { ClubContent } from "../component/clubContent";
 import Footer from "../component/footer";
 import { useParams } from 'react-router-dom';
+import { useState } from 'react';
 
 // 상세페이지
 function ClubPage() {
-    const urlparam = useParams();
+    const params = useParams();
 
     return (
         <>
@@ -16,7 +17,7 @@ function ClubPage() {
             <section id="body">
                 <div>
                     <ClubContent
-                        url={urlparam}
+                        url={`club/${params.clubName}`}
                     />
                 </div>
             </section>

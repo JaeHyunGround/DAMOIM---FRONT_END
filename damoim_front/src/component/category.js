@@ -1,56 +1,42 @@
-import { getData } from "../clubData";
 import { useParams, Link } from "react-router-dom";
 import '../css/club.css';
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 export const Category = () => {
-    const clubdata = getData();
+    const [data, setData] = useState([]);
+    const URL = 'http://115.85.181.24:8000'
+
+    useEffect(() => {
+        axios.get(URL)
+            .then(res => setData(res.data))
+    }, [])
+
     const params = useParams();
 
     const clubs = [];
-    clubdata.forEach((club) => {
-        if (club.type == params.category)
+    data.forEach((club) => {
+        if (club.group_category == params.category)
             clubs.push({
-                type: club.type,
-                name: club.name,
-                url: club.url,
-                img : club.img
+                type: club.group_category,
+                name: club.group_name,
+                url: club.group_name,
+                img: club.logo,
             })
     })
-    return (
-        // <div className="club-box">
-        //     <div className="club-line"></div>
-        //     <div className="clubTable">
-        //     {clubs.map((club) => (
-        //         <>
-        //             <Link to={club.url} className="clubCard">
-        //                 <a className="club-name">{club.name}</a>
-        //                 <div className="card-img">
-        //                     <img src={club.img} className='club-logo'/>
-        //                 </div>
-        //                 <div className="detail-box">
-        //                     <img src="./image/detailpage.png" />
-        //                 </div>
-                        
-        //             </Link>
-                    
-        //         </>
-                
-        //     ))}
-        //     </div>
-        // </div>
 
+    return (
         <div className="club-box">
             <p className="cateName">{params.category}</p>
-                <>
-                    <div className="club-line"></div>
-                    <div className="clubTable">
+            <>
+                <div className="club-line"></div>
+                <div className="clubTable">
                     {clubs.map((club) => (
                         <>
-                            <Link to={club.url} className="clubCard">
+                            <Link to={`club/${club.url}`} className="clubCard">
                                 <a className="club-name">{club.name}</a>
                                 <div className="card-img">
-                                    <img src={club.img} className='club-logo'/>
+                                    <img src={`/image/${club.img}`} className='club-logo' />
                                 </div>
                                 <div className="detail-box">
                                     <img src="./image/detailpage.png" />
@@ -58,8 +44,8 @@ export const Category = () => {
                             </Link>
                         </>
                     ))}
-                    </div>
-                </>
+                </div>
+            </>
         </div>
     )
 }

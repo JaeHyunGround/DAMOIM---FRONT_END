@@ -1,4 +1,8 @@
-const clubData = [
+
+import axios from "axios";
+import { useState, useEffect } from "react";
+
+const staticData = [
     {
         type: '예술',
         name: 'C.O.K',
@@ -133,6 +137,12 @@ const clubData = [
     },
     {
         type: '스터디',
+        name: '멋쟁이사자처럼',
+        url: 'club/study',
+        img: '/image/likelion.png'
+    },
+    {
+        type: '스터디',
         name: 'Auto-Mania',
         url: 'club/study',
         img: '/image/Auto-Mania.png'
@@ -158,6 +168,19 @@ const clubData = [
 
 ]
 
+
+const clubData = []
+
+export const Data = () => {
+    const [posts, setPosts] = useState([]);
+    const URL = 'http://115.85.181.24:8000'
+
+    useEffect(() => {
+        axios.get(URL)
+            .then(res => setPosts(res.data))
+    })
+}
+
 export function getData() {
-    return clubData;
+    return staticData;
 }

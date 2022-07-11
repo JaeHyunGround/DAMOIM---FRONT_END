@@ -2,6 +2,7 @@ import '../css/posting.css';
 import Header from "../component/header";
 import Footer from "../component/footer";
 import { useParams } from 'react-router-dom';
+import { useState } from 'react';
 
 function PostingPage() {
     const urlparam = useParams();
