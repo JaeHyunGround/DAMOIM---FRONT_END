@@ -51,7 +51,7 @@ export const ClubContent = (props) => {
                     <div className='leftImg'>
                         <img src="/image/likelion.png" />
                     </div>
-                    <div id='loca'>
+                    <div id='loca1'>
                         <h3 className='clubName'>{clubs[0].name}</h3>
                         <h4>동아리 소개: </h4>
                         <a className='clubIntro'>
@@ -59,7 +59,7 @@ export const ClubContent = (props) => {
                         </a>
                     </div>
                 </div>
-                <a className='clubLocation' id='loca'>
+                <a className='clubLocation' id='loca2'>
                     동아리방 위치:
                     동방 위치는 다음과 같습니다.
                 </a>
