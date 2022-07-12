@@ -24,25 +24,30 @@ function Header() {
         document.location.href = "/";
     }
 
-    axios.get('http://115.85.181.24:8000/account/login/check', {
-        headers: {
-            Authorization: localStorage.getItem('token')
-        }
-    }).then((res) => {
-        // setIsLogin('true');
-        if (res.data.is_login === 'true') {
-            setIsLogin('true')
-        } else {
-            setIsLogin('false')
-        }
-    })
+    useEffect(() => {
+        axios.get('http://115.85.181.24:8000/account/login/check', {
+            headers: {
+                Authorization: localStorage.getItem('token')
+            }
+        }).then((res) => {
+            // setIsLogin('true');
+            if (res.data.is_login === 'true') {
+                setIsLogin('true')
+            } else {
+                setIsLogin('false')
+            }
+        })
+    }, [])
 
     const tokenClear = () => {
-        localStorage.clear()
+        // localStorage.clear()
+        localStorage.setItem('token', 'clear');
         alert("로그아웃 되었습니다.");
-        window.location.replace('/')
-    }
 
+        if (localStorage.getItem('token') == 'clear') {
+            setIsLogin('false');
+        }
+    }
     return (
         <>
             <section className='headTop'>
